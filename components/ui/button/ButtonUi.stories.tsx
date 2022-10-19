@@ -1,22 +1,22 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import ButtonInputs, { IButtonInputs } from './ButtonInputs';
-import { mockButtonInputsProps } from './ButtonInputs.mocks';
+import ButtonUi, { IButtonUi } from './ButtonUi';
+import { mockButtonUiProps } from './ButtonUi.mocks';
 
 export default {
-  title: 'templates/ButtonInputs',
-  component: ButtonInputs,
+  title: 'templates/ButtonUi',
+  component: ButtonUi,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof ButtonInputs>;
+} as ComponentMeta<typeof ButtonUi>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ButtonInputs> = (args) => (
-  <ButtonInputs {...args} />
+const Template: ComponentStory<typeof ButtonUi> = (args) => (
+  <ButtonUi {...args} />
 );
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  ...mockButtonInputsProps.base,
-} as IButtonInputs;
+  ...mockButtonUiProps.base,
+} as IButtonUi;
