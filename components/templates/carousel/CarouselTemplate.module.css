@@ -1,0 +1,7 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0.48%, rgba(0, 0, 0, 0.47) 3.73%, rgba(0, 0, 0, 0.443) 6.67%, rgba(0, 0, 0, 0.424) 9.29%, rgba(0, 0, 0, 0.404) 11.98%, rgba(0, 0, 0, 0.384) 14.88%, rgba(0, 0, 0, 0.37) 18.18%, rgba(0, 0, 0, 0.34) 25%, rgba(0, 0, 0, 0.32) 32.4%, rgba(0, 0, 0, 0.28) 39.23%, rgba(0, 0, 0, 0.24) 47.42%, rgba(0, 0, 0, 0.2) 57.17%, rgba(0, 0, 0, 0.12) 68.67%, rgba(0, 0, 0, 0.06) 82.12%, rgba(0, 0, 0, 0) 97.71%);
+  padding: 22px 60px;
+}

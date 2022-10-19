@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import HeaderTemplate from '../components/templates/header/HeaderTemplate'
+import CarouselTemplate from '../components/templates/carousel/CarouselTemplate'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <HeaderTemplate sampleTextProp="Example header"></HeaderTemplate>
+      <CarouselTemplate sampleTextProp="testing carousel"></CarouselTemplate>
     </div>
   )
 }
