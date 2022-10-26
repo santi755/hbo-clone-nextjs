@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './HeaderTemplate.module.css';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { CgMenu } from "react-icons/cg";
 
 export interface IHeaderTemplate {
   sampleTextProp: string;
@@ -12,7 +12,7 @@ const HeaderTemplate: React.FC<IHeaderTemplate> = ({ sampleTextProp }) => {
     <div className={styles.header}>
       <div>
         <button>
-          <GiHamburgerMenu></GiHamburgerMenu>
+          <CgMenu></CgMenu>
         </button>
         <Link href="/movies">
           <a>Movies</a>

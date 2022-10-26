@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## NEXT TECHNOLOGIES
 - zustand (Redux alternative)
+
+## CURRENT ICON PACKAGE (from https://react-icons.github.io/react-icons/)
+- css.gg
 ## Getting Started
 
 First, run the development server:
