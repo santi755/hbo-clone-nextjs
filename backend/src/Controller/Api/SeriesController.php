@@ -6,6 +6,7 @@ use App\Entity\Series;
 use App\Form\Model\SeriesDto;
 use App\Form\Type\SeriesFormType;
 use App\Repository\SeriesRepository;
+use App\Service\FileUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
@@ -27,17 +28,14 @@ class SeriesController extends AbstractFOSRestController
      * @Rest\Post(path="/series")
      * @Rest\View(serializerGroups={"serie"}, serializerEnableMaxDepthChecks=true)
      */
-    public function postAction(EntityManagerInterface $em, Request $request, FilesystemOperator $defaultStorage)
+    public function postAction(EntityManagerInterface $em, Request $request, FileUploader $fileUploader)
     {
         $serieDto = new SeriesDto();
         $form = $this->createForm(SeriesFormType::class, $serieDto);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $extension = explode('/', mime_content_type($serieDto->base64Image))[1];
-            $data = explode(',', $serieDto->base64Image);
-            $filename = sprintf('/series/%s.%s', uniqid('series_', true), $extension);
-            $defaultStorage->write($filename, base64_decode($data[1]));
+            $filename = $fileUploader->uploadBase64File($serieDto->base64Image);
 
             $serie = new Series();
             $serie->setName($serieDto->name);

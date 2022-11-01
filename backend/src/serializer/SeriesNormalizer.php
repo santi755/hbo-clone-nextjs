@@ -24,8 +24,8 @@ class SeriesNormalizer implements ContextAwareNormalizerInterface
     {
         $data = $this->normalizer->normalize($serie, $format, $context);
 
-        if (!empty($serie->getImage())) {
-            $data['image_path'] = $this->urlHelper->getAbsoluteUrl('/storage/default/' . $serie->getImage());
+        if (!empty($serie->getImagePath())) {
+            $data['image_path'] = $this->urlHelper->getAbsoluteUrl('/storage/default/' . $serie->getImagePath());
         }
 
         return $data;
