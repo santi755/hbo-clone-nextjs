@@ -1,0 +1,34 @@
+App\Form\Model\SeriesDto:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                min: 3
+                max: 255
+                minMessage: 'The name must be at least {{ limit }} characters long'
+                maxMessage: 'The name cannot be longer than {{ limit }} characters'
+                allowEmptyString: false
+        title:
+            - NotBlank: ~
+            - Length:
+                min: 3
+                max: 255
+                minMessage: 'The title must be at least {{ limit }} characters long'
+                maxMessage: 'The title cannot be longer than {{ limit }} characters'
+                allowEmptyString: false
+        subtitle:
+            - NotBlank: ~
+            - Length:
+                min: 3
+                max: 255
+                minMessage: 'The subtitle must be at least {{ limit }} characters long'
+                maxMessage: 'The subtitle cannot be longer than {{ limit }} characters'
+                allowEmptyString: false
+        # image_path:
+        #     - NotBlank: ~
+        #     - Length:
+        #         min: 3
+        #         max: 255
+        #         minMessage: 'The image_path must be at least {{ limit }} characters long'
+        #         maxMessage: 'The image_path cannot be longer than {{ limit }} characters'
+        #         allowEmptyString: false

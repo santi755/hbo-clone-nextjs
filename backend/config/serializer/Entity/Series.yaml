@@ -1,0 +1,12 @@
+App\Entity\Series:
+    attributes:
+        id:
+            groups: ['serie']
+        title:
+            groups: ['serie']
+        image_path:
+            groups: ['serie']
+        name:
+            groups: ['serie']
+        subtitle:
+            groups: ['serie']
