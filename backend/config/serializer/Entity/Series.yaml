@@ -10,3 +10,6 @@ App\Entity\Series:
             groups: ['serie']
         subtitle:
             groups: ['serie']
+        categories:
+            groups: ['serie']
+
