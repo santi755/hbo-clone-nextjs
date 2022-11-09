@@ -17,7 +17,7 @@ class CategoryManager
         $this->categoryRepository = $categoryRepository;
     }
 
-    public function find(int $id): Category
+    public function find(int $id): ?Category
     {
         return $this->categoryRepository->find($id);
     }

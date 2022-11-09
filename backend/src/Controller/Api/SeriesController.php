@@ -39,6 +39,21 @@ class SeriesController extends AbstractFOSRestController
     }
 
     /**
+     * @Rest\Get(path="/series/{id}", requirements={"id"="\d+"})
+     * @Rest\View(serializerGroups={"serie"}, serializerEnableMaxDepthChecks=true)
+     */
+    public function getSingleAction(
+        int $id,
+        SeriesManager $seriesManager
+    ) {
+        $serie = $seriesManager->find($id);
+        if (!$serie) {
+            return View::create('Book not found', Response::HTTP_BAD_REQUEST);
+        }
+        return $serie;
+    }
+
+    /**
      * @Rest\Post(path="/series/{id}", requirements={"id"="\d+"})
      * @Rest\View(serializerGroups={"serie"}, serializerEnableMaxDepthChecks=true)
      */

@@ -30,6 +30,7 @@ class SeriesFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => SeriesDto::class,
+            'csrf_protection' => false,
         ]);
     }
 

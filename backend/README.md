@@ -12,4 +12,5 @@ composer require --dev symfony/maker-bundle
 composer require friendsofsymfony/rest-bundle
 composer require symfony/serializer-pack
 composer require symfony/validator twig doctrine/annotations
+composer require symfony/security-bundle
 ```
